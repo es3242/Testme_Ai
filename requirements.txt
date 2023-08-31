@@ -1,0 +1,8 @@
+konlpy
+Flask
+pdfminer.six
+scikit-learn
+numpy
+pandas
+openai
+JPype1==1.3.0

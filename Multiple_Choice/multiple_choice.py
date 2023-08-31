@@ -31,8 +31,10 @@ def make_mutiple_choice_Test(Text_based_PDF,Questions_Amount):
         keyword_page_dict = tfidf.get_highest_tfidf_pages(tfidf.tf_idf(Text_based_PDF))[:Questions_Amount]
         Test = []
         for i in range(Questions_Amount):
+            print("확인1")
             #문제 갯수 만큼 랜덤 추출로 수정-> 중요 문서로 수정
             prompt = make_prompt.make_prompt(Text_based_PDF[keyword_page_dict[i]['page_index']],keyword_page_dict[i]['word'])
+            print("확인2")
             response = generate_response(prompt,setting.GPT_model)
             Test.append(response.choices[0].text.strip())
     return Test

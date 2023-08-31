@@ -23,8 +23,8 @@ def tf_idf(Text_based_PDF):
     tfidf = pd.DataFrame(tfidf_array, columns=feature_names)
     tfidf['page'] = pages
 
-    # TF-IDF 점수를 기준으로 열(단어)을 오름차순 정렬
-    sorted_cols = tfidf.iloc[:, :-1].mean().sort_values().index
+    # TF-IDF 점수를 기준으로 열(단어)을 내림차순 정렬
+    sorted_cols = tfidf.iloc[:, :-1].mean().sort_values(ascending=False).index
     tfidf = tfidf[sorted_cols.tolist() + ['page']]
 
     return tfidf
