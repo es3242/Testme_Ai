@@ -1,5 +1,5 @@
 # OpenAI API Key 설정
 
-organization = "org-Wjproo0JXq3OYnGJbPsyZNxE"
-api_key = "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"
+organization = "organization-key"
+api_key = "api-key"
 GPT_model = "text-davinci-003"
